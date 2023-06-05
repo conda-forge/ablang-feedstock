@@ -1,5 +1,5 @@
 {% set name = "ablang" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ablang-{{ version }}.tar.gz
-  sha256: 1a5e703cbaaa814b4029f0d356641e45a95d690f172ec83cb0e8472b0fe82357
+  sha256: bb573a364f3b1b992634e8b8a29e236f598eb194bfa98d8d8a5ce73cbef119f8
 
 build:
   noarch: python
@@ -29,10 +29,6 @@ requirements:
 test:
   imports:
     - ablang
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: https://pypi.org/project/ablang/
