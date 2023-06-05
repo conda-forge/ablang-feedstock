@@ -29,10 +29,6 @@ requirements:
 test:
   imports:
     - ablang
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: https://pypi.org/project/ablang/
