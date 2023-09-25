@@ -1,5 +1,5 @@
 {% set name = "ablang" %}
-{% set version = "0.2.3" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ablang-{{ version }}.tar.gz
-  sha256: bb573a364f3b1b992634e8b8a29e236f598eb194bfa98d8d8a5ce73cbef119f8
+  sha256: 17a9a13827c14189cb0d86c97ed18af53608b46d78a6d310dae3b5f46eb3c6d1
 
 build:
   noarch: python
@@ -19,12 +19,12 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - fairseq
     - numba
     - numpy
     - python >=3.6
     - requests
     - pytorch >=1.6
+    - pandas
 
 test:
   imports:
