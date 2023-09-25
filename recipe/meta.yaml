@@ -19,12 +19,12 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - fairseq
     - numba
     - numpy
     - python >=3.6
     - requests
     - pytorch >=1.6
+    - pandas
 
 test:
   imports:
