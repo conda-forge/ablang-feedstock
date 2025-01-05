@@ -6,27 +6,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ablang-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ablang-{{ version }}.tar.gz
   sha256: 17a9a13827c14189cb0d86c97ed18af53608b46d78a6d310dae3b5f46eb3c6d1
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - numba
     - numpy
-    - python >=3.6
+    - python >={{ python_min }}
     - requests
     - pytorch >=1.6
     - pandas
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ablang
 
